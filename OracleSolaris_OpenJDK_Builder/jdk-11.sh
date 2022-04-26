@@ -9,6 +9,8 @@ PATH="$STUDIO:/usr/bin"
 
 CONFIGURE_OPTIONS+=" --with-boot-jdk=$BOOT_JDK"
 
+old_autoconf_version_needed && PATH="$AUTOCONF_OLD_PATH:$PATH"
+
 hg clone ${JDK_REPO}/$SRC_DIR "$BUILD_DIR"/$SRC_DIR
 cd "$BUILD_DIR"/$SRC_DIR
 

@@ -1,11 +1,6 @@
 WS="`pwd`"
 BUILD_DIR="$WS/build_dir"
-
-if [ $VERSION -lt 16 ]; then
-   SRC_DIR="jdk${VERSION}u"
-else
-   SRC_DIR="jdk${VERSION}"
-fi
+SRC_DIR="jdk${VERSION}u"
 
 if [ `uname -p` = 'sparc' ] ; then
   JDK_PLATFORM="sparcv9"

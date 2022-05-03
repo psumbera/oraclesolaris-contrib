@@ -18,7 +18,7 @@ CONFIGURE_OPTIONS+=" --disable-warnings-as-errors"
 old_gmake_version_needed && CONFIGURE_OPTIONS+=" MAKE=$GMAKE_OLD"
 old_autoconf_version_needed && PATH="$AUTOCONF_OLD_PATH:$PATH"
 
-hg clone ${JDK_REPO}/$SRC_DIR "$BUILD_DIR"/$SRC_DIR
+git clone ${JDK_GITHUB_REPO}/$SRC_DIR "$BUILD_DIR"/$SRC_DIR
 cd "$BUILD_DIR"/$SRC_DIR
 
 apply_patch_series

@@ -17,7 +17,6 @@ GXX=/usr/gcc/10/bin/g++
 
 mkdir -p "$BUILD_DIR"
 rm -rf "$BUILD_DIR"/$SRC_DIR "$BUILD_DIR"/$TOOLS_DIR
-test -z $JDK_REPO && JDK_REPO=http://hg.openjdk.java.net/jdk-updates
 test -z $JDK_GITHUB_REPO && JDK_GITHUB_REPO=https://github.com/openjdk
 
 function apply_patch_series {

@@ -21,11 +21,8 @@ CONFIGURE_OPTIONS+=" --with-boot-jdk=$BOOT_JDK"
 
 old_gmake_version_needed && CONFIGURE_OPTIONS+=" MAKE=$GMAKE_OLD"
 
-hg clone ${JDK_REPO}/$SRC_DIR "$BUILD_DIR"/$SRC_DIR
+git clone ${JDK_GITHUB_REPO}/$SRC_DIR "$BUILD_DIR"/$SRC_DIR
 cd "$BUILD_DIR"/$SRC_DIR
-
-# JDK 9 uses script to download nested repositories
-bash get_source.sh
 
 fix_cups_versioning
 apply_patch_series

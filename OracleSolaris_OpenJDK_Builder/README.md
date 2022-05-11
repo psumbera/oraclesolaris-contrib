@@ -29,7 +29,7 @@ To create these mirrors in your directory you can use mirror.sh script:
 Example:
 
 ```
-git clone https://github.com/oracle/oraclesolaris-contrib.git
+git clone -b OpenJDK https://github.com/psumbera/oraclesolaris-contrib.git
 cd oraclesolaris-contrib/OracleSolaris_OpenJDK_Builder/
 ./build-all.sh
 Building Openjdk 9...
